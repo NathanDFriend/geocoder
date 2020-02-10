@@ -117,11 +117,11 @@ $client = new \GuzzleHttp\Client();
 
 $geocoder = new Geocoder($client);
 
-$geocoder->setApiKey(config('geocoder.key'));
+$geocoder::setApiKey(config('geocoder.key'));
 
-$geocoder->setCountry(config('US'));
+$geocoder::setCountry(config('US'));
 
-$geocoder->getCoordinatesForAddress('Infinite Loop 1, Cupertino');
+$geocoder::getCoordinatesForAddress('Infinite Loop 1, Cupertino');
 
 /*
   This function returns an array with keys
@@ -170,7 +170,7 @@ $geocoder
 This is how you can reverse geocode coordinates to addresses.
 
 ```php
-$geocoder->getAddressForCoordinates(40.714224, -73.961452);
+$geocoder::getAddressForCoordinates(40.714224, -73.961452);
 
 /*
   This function returns an array with keys
